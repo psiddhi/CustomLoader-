@@ -9,7 +9,7 @@ class FreshserviceLoader(BaseLoader):
         self.api_key = api_key
         self.article_id = article_id
         self.omit_metadata = omit_metadata
-        self.base_url = "https://charusat.freshservice.com/api/v2/solutions/articles/"
+        self.base_url = "https://xxxxxxx.freshservice.com/api/v2/solutions/articles/"
 
         self.auth_header = {
             "Authorization": "Basic " + base64.b64encode(f"{self.api_key}:X".encode()).decode()
@@ -47,8 +47,8 @@ class FreshserviceLoader(BaseLoader):
             return [Document(page_content=clean_content, metadata=metadata)]
 
 
-api_key = "QFN39X1g60Gi9Qo9mbf-"  
-article_id = 29000041041        
+api_key = ""  
+article_id = ""      
 
 loader = FreshserviceLoader(api_key, article_id, omit_metadata=False)
 documents = loader.lazy_load()
