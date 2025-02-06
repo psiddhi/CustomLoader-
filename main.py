@@ -40,8 +40,8 @@ class FreshserviceKBLoader(BaseLoader):
         return list(self.lazy_load())
 
 
-api_url = "https://charusat.freshservice.com/api/v2/solutions/articles/29000040911"
-api_key = "QFN39X1g60Gi9Qo9mbf-"
+api_url = ""
+api_key = ""
 
 loader = FreshserviceKBLoader(api_url, api_key)
 
